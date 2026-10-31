@@ -245,7 +245,8 @@ static class InvoiceComparisonExample
         ("PO number", r => r.PoNumber),
         ("Currency", r => r.Currency),
         ("Total", r => r.Total),
-        ("Needs approval", r => r.RequiresApproval),
+        ("Model approval", r => r.RequiresApproval),
+        ("Rule approval", r => InvoiceAgent.NeedsApproval(r)),
         ("Issues", r => r.Issues.Count)
     ];
 
@@ -419,6 +420,16 @@ static class InvoiceAgent
         Use an empty list when there is nothing to flag.
         """;
 
+    // The approval rule, applied in code. The model's requires_approval is only a second opinion.
+    const decimal ApprovalThreshold = 5000m;
+
+    // A model that still wants tools after this many rounds is stuck; stop and send the invoice to a person.
+    const int MaxToolRounds = 5;
+
+    // The decision: the total from the model, the supplier status from the vendor master.
+    public static bool NeedsApproval(InvoiceReview review) =>
+        review.Total > ApprovalThreshold || FindSupplier(review.SupplierName) is not { Status: "active" };
+
     public static async Task<InvoiceRun> RunAsync(
         ResponsesApi api, string deployment, string effort, string path, CancellationToken cancellationToken)
     {
@@ -442,7 +453,6 @@ static class InvoiceAgent
         var body = new JsonObject
         {
             ["model"] = deployment,
-            ["instructions"] = Instructions,
             ["input"] = new JsonArray
             {
                 new JsonObject
@@ -464,15 +474,18 @@ static class InvoiceAgent
         usage.Add(response.RootElement);
 
         // The tool loop: the model asks for check_supplier, this code runs it and sends the result back.
-        // previous_response_id chains the turns; the loop stops when the model asks for no more calls.
-        for (var round = 1; round <= 5; round++)
+        // previous_response_id chains the turns but not the instructions, so AddToolsAndFormat sends them every turn.
+        // The loop stops when the model asks for no more calls, and fails closed if it's still asking after the limit.
+        for (var round = 1; HasToolCalls(response.RootElement); round++)
         {
-            var outputs = RunToolCalls(response.RootElement, deployment);
-            if (outputs.Count == 0)
+            if (round > MaxToolRounds)
             {
-                break;
+                response.Dispose();
+                throw new InvalidOperationException(
+                    $"{deployment} still asked for tools after {MaxToolRounds} rounds. Send this invoice to a person.");
             }
 
+            var outputs = RunToolCalls(response.RootElement, deployment);
             var next = new JsonObject
             {
                 ["model"] = deployment,
@@ -494,6 +507,9 @@ static class InvoiceAgent
             ?? throw new InvalidOperationException($"{deployment} returned no invoice review: {json}");
         return new InvoiceRun(review, usage, stopwatch.Elapsed);
     }
+
+    static bool HasToolCalls(JsonElement root) =>
+        root.GetProperty("output").EnumerateArray().Any(item => item.GetProperty("type").GetString() == "function_call");
 
     static JsonArray RunToolCalls(JsonElement root, string deployment)
     {
@@ -518,22 +534,27 @@ static class InvoiceAgent
     }
 
     // A stand-in for your ERP or vendor master.
+    static readonly Dictionary<string, Supplier> Suppliers = new(StringComparer.OrdinalIgnoreCase)
+    {
+        ["Fabrikam Office Supplies"] = new("V-1042", "active"),
+        ["Northwind Traders"] = new("V-0877", "on hold")
+    };
+
+    static Supplier? FindSupplier(string supplierName) =>
+        Suppliers.TryGetValue(supplierName.Trim(), out var supplier) ? supplier : null;
+
     static string CheckSupplier(string supplierName)
     {
-        var suppliers = new Dictionary<string, (string Id, string Status)>(StringComparer.OrdinalIgnoreCase)
-        {
-            ["Fabrikam Office Supplies"] = ("V-1042", "active"),
-            ["Northwind Traders"] = ("V-0877", "on hold")
-        };
-
-        var result = suppliers.TryGetValue(supplierName.Trim(), out var supplier)
+        var result = FindSupplier(supplierName) is { } supplier
             ? new JsonObject { ["found"] = true, ["supplier_id"] = supplier.Id, ["status"] = supplier.Status }
             : new JsonObject { ["found"] = false };
         return result.ToJsonString();
     }
 
+    // Every request in the loop sends the same instructions, tool, effort and output schema.
     static void AddToolsAndFormat(JsonObject body, string effort)
     {
+        body["instructions"] = Instructions;
         body["tools"] = new JsonArray
         {
             new JsonObject
@@ -633,6 +654,9 @@ record InvoiceReview(
     List<string> Issues);
 
 record InvoiceRun(InvoiceReview Review, Usage Usage, TimeSpan Elapsed);
+
+// A vendor master entry.
+record Supplier(string Id, string Status);
 
 static class Json
 {
