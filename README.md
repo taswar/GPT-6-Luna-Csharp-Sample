@@ -3,6 +3,7 @@
 > A runnable .NET 10 console app that uses **GPT-6 Luna** in **Microsoft Foundry** as the cheap first stage of a high-volume agent: it triages 100 support tickets, measures accuracy, missed escalations, latency and cost, and hands only the hard tickets to a bigger model.
 
 ![GPT-6 Luna for C#: The Cheap First Stage for High-Volume Agents](GPT-6-Luna-for-CSharp-The-Cheap-First-Stage-for-High-Volume-Agents.png)
+[![build](https://github.com/taswar/GPT-6-Luna-Csharp-Sample/actions/workflows/dotnet.yml/badge.svg)](https://github.com/taswar/GPT-6-Luna-Csharp-Sample/actions/workflows/dotnet.yml)
 ![.NET 10](https://img.shields.io/badge/.NET-10-512BD4)
 [![License: MIT](https://img.shields.io/badge/license-MIT-green)](LICENSE)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen)](CONTRIBUTING.md)
@@ -137,6 +138,7 @@ invoice.pdf                       Invoice for Example 2
 invoice.png                       The same invoice as an image
 CONTRIBUTING.md                   How to contribute
 LICENSE                           MIT license
+.github/workflows/dotnet.yml      Build on every push and pull request
 GPT-6-Luna-for-CSharp-*.png       Banner image for this README
 ```
 
