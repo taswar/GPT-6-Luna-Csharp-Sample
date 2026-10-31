@@ -1,0 +1,802 @@
+[
+  {
+    "id": "T-1001",
+    "from": "Ben at Wide World Importers",
+    "subject": "Cancel and refund",
+    "body": "We stopped using Sync Pro two weeks ago. Please cancel the subscription and refund the unused part of the year.",
+    "expected_category": "billing",
+    "expected_escalate": true
+  },
+  {
+    "id": "T-1002",
+    "from": "Kofi at Litware",
+    "subject": "Do you have a status page?",
+    "body": "Is there a status page we can subscribe to for outages?",
+    "expected_category": "other",
+    "expected_escalate": false
+  },
+  {
+    "id": "T-1003",
+    "from": "Sam at Fourth Coffee",
+    "subject": "Linux client",
+    "body": "We have developers on Linux. Is a Linux client on the roadmap?",
+    "expected_category": "feature_request",
+    "expected_escalate": false
+  },
+  {
+    "id": "T-1004",
+    "from": "Chloe at Wide World Importers",
+    "subject": "Lost phone with authenticator",
+    "body": "I lost the phone with my authenticator app. How do I get back into my account?",
+    "expected_category": "sign_in",
+    "expected_escalate": false
+  },
+  {
+    "id": "T-1005",
+    "from": "Elif at Fourth Coffee",
+    "subject": "Files stuck at 'pending'",
+    "body": "About 800 files in the Photos folder have shown 'pending' since yesterday on my Android phone. Nothing uploads.",
+    "expected_category": "sync",
+    "expected_escalate": false
+  },
+  {
+    "id": "T-1006",
+    "from": "Nadia at Fabrikam",
+    "subject": "Bandwidth schedule",
+    "body": "It would help to limit upload speed during office hours and go full speed at night.",
+    "expected_category": "feature_request",
+    "expected_escalate": false
+  },
+  {
+    "id": "T-1007",
+    "from": "Jamal at Tailspin Toys",
+    "subject": "2FA codes rejected",
+    "body": "My authenticator codes are rejected every time. The clock on my Surface tablet is correct.",
+    "expected_category": "sign_in",
+    "expected_escalate": false
+  },
+  {
+    "id": "T-1008",
+    "from": "Viktor at Fabrikam",
+    "subject": "SSO loop",
+    "body": "Signing in with our company SSO just loops back to the sign-in page. This started for everyone at Fourth Coffee today.",
+    "expected_category": "sign_in",
+    "expected_escalate": true
+  },
+  {
+    "id": "T-1009",
+    "from": "Wen at Alpine Ski House",
+    "subject": "Lost phone with authenticator",
+    "body": "I lost the phone with my authenticator app. How do I get back into my account?",
+    "expected_category": "sign_in",
+    "expected_escalate": false
+  },
+  {
+    "id": "T-1010",
+    "from": "Tariq at Fourth Coffee",
+    "subject": "Restored wrong version",
+    "body": "Version history restored an old copy of our budget spreadsheet over today's work. Can we get today's version back?",
+    "expected_category": "data_loss",
+    "expected_escalate": true
+  },
+  {
+    "id": "T-1011",
+    "from": "Sam at Woodgrove Bank",
+    "subject": "Files disappeared from folder",
+    "body": "Half the files in Client contracts vanished this morning. They aren't in the trash on the web either.",
+    "expected_category": "data_loss",
+    "expected_escalate": true
+  },
+  {
+    "id": "T-1012",
+    "from": "Zane at Alpine Ski House",
+    "subject": "Dark mode please",
+    "body": "Any plans for a dark mode in the desktop app? Our designers work late.",
+    "expected_category": "feature_request",
+    "expected_escalate": false
+  },
+  {
+    "id": "T-1013",
+    "from": "Quinn at Alpine Ski House",
+    "subject": "Can't sign in after password reset",
+    "body": "I reset my password and now the Windows laptop app says 'invalid credentials' even though the web works.",
+    "expected_category": "sign_in",
+    "expected_escalate": false
+  },
+  {
+    "id": "T-1014",
+    "from": "Uma at Proseware",
+    "subject": "New folder not syncing",
+    "body": "I created a Design assets folder on my Windows laptop but it never shows up on the web or my other devices.",
+    "expected_category": "sync",
+    "expected_escalate": false
+  },
+  {
+    "id": "T-1015",
+    "from": "Wen at Woodgrove Bank",
+    "subject": "Uploads very slow",
+    "body": "Uploads crawl at about 200 KB/s on a 500 Mbps connection. Other services are fast.",
+    "expected_category": "performance",
+    "expected_escalate": false
+  },
+  {
+    "id": "T-1016",
+    "from": "Tariq at Wide World Importers",
+    "subject": "Export audit log to CSV",
+    "body": "Admins at Litware want to export the audit log to CSV for compliance reviews.",
+    "expected_category": "feature_request",
+    "expected_escalate": false
+  },
+  {
+    "id": "T-1017",
+    "from": "Mateo at Litware",
+    "subject": "App uses 100% CPU",
+    "body": "Sync Pro uses all the CPU on my Surface tablet for hours, even when nothing is changing.",
+    "expected_category": "performance",
+    "expected_escalate": false
+  },
+  {
+    "id": "T-1018",
+    "from": "Uma at Tailspin Toys",
+    "subject": "Card declined on renewal",
+    "body": "Renewal failed because the card expired. I updated it but the account still says payment overdue.",
+    "expected_category": "billing",
+    "expected_escalate": false
+  },
+  {
+    "id": "T-1019",
+    "from": "Tariq at Litware",
+    "subject": "Thanks to the support team",
+    "body": "Just wanted to say thanks to Mia for fixing our setup last week.",
+    "expected_category": "other",
+    "expected_escalate": false
+  },
+  {
+    "id": "T-1020",
+    "from": "Kofi at Alpine Ski House",
+    "subject": "Selective sync ignored",
+    "body": "I unchecked Q4 reports in selective sync but it still downloads to my MacBook and fills the disk.",
+    "expected_category": "sync",
+    "expected_escalate": false
+  },
+  {
+    "id": "T-1021",
+    "from": "Ben at Alpine Ski House",
+    "subject": "Initial sync taking days",
+    "body": "The first sync of our 40 files has been running for three days on my Surface tablet.",
+    "expected_category": "performance",
+    "expected_escalate": false
+  },
+  {
+    "id": "T-1022",
+    "from": "Grace at Fabrikam",
+    "subject": "Question",
+    "body": "Is it supposed to do that?",
+    "expected_category": "other",
+    "expected_escalate": true
+  },
+  {
+    "id": "T-1023",
+    "from": "Ben at Fabrikam",
+    "subject": "Battery drain on mobile",
+    "body": "Since the last update the Android app drains my battery overnight.",
+    "expected_category": "performance",
+    "expected_escalate": false
+  },
+  {
+    "id": "T-1024",
+    "from": "Elif at Wide World Importers",
+    "subject": "Invoice shows wrong plan",
+    "body": "Our invoice lists the Business plan but we downgraded to Pro last month. Can you correct invoice INV-13714?",
+    "expected_category": "billing",
+    "expected_escalate": true
+  },
+  {
+    "id": "T-1025",
+    "from": "Nadia at Adventure Works",
+    "subject": "Deleted by a former employee",
+    "body": "A former employee deleted the Q4 reports folder before leaving. We need it restored urgently.",
+    "expected_category": "data_loss",
+    "expected_escalate": true
+  },
+  {
+    "id": "T-1026",
+    "from": "Nadia at Northwind Traders",
+    "subject": "Invoice shows wrong plan",
+    "body": "Our invoice lists the Business plan but we downgraded to Pro last month. Can you correct invoice INV-17390?",
+    "expected_category": "billing",
+    "expected_escalate": true
+  },
+  {
+    "id": "T-1027",
+    "from": "Tariq at Northwind Traders",
+    "subject": "Security questionnaire",
+    "body": "Our security team needs your SOC 2 report and a completed vendor questionnaire.",
+    "expected_category": "other",
+    "expected_escalate": true
+  },
+  {
+    "id": "T-1028",
+    "from": "Ben at Woodgrove Bank",
+    "subject": "New folder not syncing",
+    "body": "I created a Photos folder on my MacBook but it never shows up on the web or my other devices.",
+    "expected_category": "sync",
+    "expected_escalate": false
+  },
+  {
+    "id": "T-1029",
+    "from": "Priya at Proseware",
+    "subject": "Charged twice this month",
+    "body": "My card was charged $15.00 twice on the 14th for the same Pro plan. Please refund the duplicate.",
+    "expected_category": "billing",
+    "expected_escalate": true
+  },
+  {
+    "id": "T-1030",
+    "from": "Sam at Litware",
+    "subject": "Export audit log to CSV",
+    "body": "Admins at Adventure Works want to export the audit log to CSV for compliance reviews.",
+    "expected_category": "feature_request",
+    "expected_escalate": false
+  },
+  {
+    "id": "T-1031",
+    "from": "Rosa at Fourth Coffee",
+    "subject": "Linux client",
+    "body": "We have developers on Linux. Is a Linux client on the roadmap?",
+    "expected_category": "feature_request",
+    "expected_escalate": false
+  },
+  {
+    "id": "T-1032",
+    "from": "Lena at Woodgrove Bank",
+    "subject": "Export audit log to CSV",
+    "body": "Admins at Litware want to export the audit log to CSV for compliance reviews.",
+    "expected_category": "feature_request",
+    "expected_escalate": false
+  },
+  {
+    "id": "T-1033",
+    "from": "Ben at Adventure Works",
+    "subject": "Thanks to the support team",
+    "body": "Just wanted to say thanks to Mia for fixing our setup last week.",
+    "expected_category": "other",
+    "expected_escalate": false
+  },
+  {
+    "id": "T-1034",
+    "from": "Ben at Tailspin Toys",
+    "subject": "Battery drain on mobile",
+    "body": "Since the last update the Android app drains my battery overnight.",
+    "expected_category": "performance",
+    "expected_escalate": false
+  },
+  {
+    "id": "T-1035",
+    "from": "Zane at Wide World Importers",
+    "subject": "Conflicted copies everywhere",
+    "body": "Every time two of us edit a file in Finance we get 'conflicted copy' duplicates. How do we stop that?",
+    "expected_category": "sync",
+    "expected_escalate": false
+  },
+  {
+    "id": "T-1036",
+    "from": "Mateo at Woodgrove Bank",
+    "subject": "Ransomware on a laptop",
+    "body": "A laptop at Wide World Importers got ransomware and the encrypted files synced to everyone. We need to roll back.",
+    "expected_category": "data_loss",
+    "expected_escalate": true
+  },
+  {
+    "id": "T-1037",
+    "from": "Chloe at Fabrikam",
+    "subject": "Everything is broken",
+    "body": "Nothing works since this morning. Please call me.",
+    "expected_category": "other",
+    "expected_escalate": true
+  },
+  {
+    "id": "T-1038",
+    "from": "Priya at Woodgrove Bank",
+    "subject": "Slow and keeps logging me out",
+    "body": "The app is slow and keeps signing me out on my MacBook.",
+    "expected_category": "performance",
+    "expected_escalate": true
+  },
+  {
+    "id": "T-1039",
+    "from": "Uma at Wide World Importers",
+    "subject": "Do you have a status page?",
+    "body": "Is there a status page we can subscribe to for outages?",
+    "expected_category": "other",
+    "expected_escalate": false
+  },
+  {
+    "id": "T-1040",
+    "from": "Yara at Fourth Coffee",
+    "subject": "Deleted by a former employee",
+    "body": "A former employee deleted the Client contracts folder before leaving. We need it restored urgently.",
+    "expected_category": "data_loss",
+    "expected_escalate": true
+  },
+  {
+    "id": "T-1041",
+    "from": "Chloe at Fabrikam",
+    "subject": "Locked out of account",
+    "body": "My account is locked after too many attempts and the unlock email never arrives.",
+    "expected_category": "sign_in",
+    "expected_escalate": false
+  },
+  {
+    "id": "T-1042",
+    "from": "Nadia at Tailspin Toys",
+    "subject": "Where is the user guide?",
+    "body": "Is there a PDF user guide I can share with new staff?",
+    "expected_category": "other",
+    "expected_escalate": false
+  },
+  {
+    "id": "T-1043",
+    "from": "Dev at Wide World Importers",
+    "subject": "Initial sync taking days",
+    "body": "The first sync of our 800 files has been running for three days on my Android phone.",
+    "expected_category": "performance",
+    "expected_escalate": false
+  },
+  {
+    "id": "T-1044",
+    "from": "Yara at Adventure Works",
+    "subject": "Initial sync taking days",
+    "body": "The first sync of our 120 files has been running for three days on my Android phone.",
+    "expected_category": "performance",
+    "expected_escalate": false
+  },
+  {
+    "id": "T-1045",
+    "from": "Priya at Litware",
+    "subject": "Sync paused by itself",
+    "body": "Sync keeps pausing on my Surface tablet after it wakes from sleep. I have to resume it by hand every morning.",
+    "expected_category": "sync",
+    "expected_escalate": false
+  },
+  {
+    "id": "T-1046",
+    "from": "Dev at Fabrikam",
+    "subject": "Dark mode please",
+    "body": "Any plans for a dark mode in the desktop app? Our designers work late.",
+    "expected_category": "feature_request",
+    "expected_escalate": false
+  },
+  {
+    "id": "T-1047",
+    "from": "Dev at Fabrikam",
+    "subject": "Files gone and I was charged",
+    "body": "My Photos files are missing and I also see a new charge of $12.00 that I don't recognize.",
+    "expected_category": "data_loss",
+    "expected_escalate": true
+  },
+  {
+    "id": "T-1048",
+    "from": "Ben at Adventure Works",
+    "subject": "App uses 100% CPU",
+    "body": "Sync Pro uses all the CPU on my work desktop for hours, even when nothing is changing.",
+    "expected_category": "performance",
+    "expected_escalate": false
+  },
+  {
+    "id": "T-1049",
+    "from": "Sam at Adventure Works",
+    "subject": "Files disappeared from folder",
+    "body": "Half the files in Client contracts vanished this morning. They aren't in the trash on the web either.",
+    "expected_category": "data_loss",
+    "expected_escalate": true
+  },
+  {
+    "id": "T-1050",
+    "from": "Quinn at Fabrikam",
+    "subject": "Urgent!!!",
+    "body": "Customer demo in an hour and the Design assets folder won't open. Help.",
+    "expected_category": "sync",
+    "expected_escalate": true
+  },
+  {
+    "id": "T-1051",
+    "from": "Uma at Fabrikam",
+    "subject": "Card declined on renewal",
+    "body": "Renewal failed because the card expired. I updated it but the account still says payment overdue.",
+    "expected_category": "billing",
+    "expected_escalate": false
+  },
+  {
+    "id": "T-1052",
+    "from": "Priya at Fourth Coffee",
+    "subject": "Dark mode please",
+    "body": "Any plans for a dark mode in the desktop app? Our designers work late.",
+    "expected_category": "feature_request",
+    "expected_escalate": false
+  },
+  {
+    "id": "T-1053",
+    "from": "Priya at Alpine Ski House",
+    "subject": "Invoice shows wrong plan",
+    "body": "Our invoice lists the Business plan but we downgraded to Pro last month. Can you correct invoice INV-56848?",
+    "expected_category": "billing",
+    "expected_escalate": true
+  },
+  {
+    "id": "T-1054",
+    "from": "Mateo at Proseware",
+    "subject": "2FA codes rejected",
+    "body": "My authenticator codes are rejected every time. The clock on my work desktop is correct.",
+    "expected_category": "sign_in",
+    "expected_escalate": false
+  },
+  {
+    "id": "T-1055",
+    "from": "Jamal at Fabrikam",
+    "subject": "Charged twice this month",
+    "body": "My card was charged $49.00 twice on the 20th for the same Pro plan. Please refund the duplicate.",
+    "expected_category": "billing",
+    "expected_escalate": true
+  },
+  {
+    "id": "T-1056",
+    "from": "Omar at Northwind Traders",
+    "subject": "Selective sync ignored",
+    "body": "I unchecked Q4 reports in selective sync but it still downloads to my Android phone and fills the disk.",
+    "expected_category": "sync",
+    "expected_escalate": false
+  },
+  {
+    "id": "T-1057",
+    "from": "Quinn at Litware",
+    "subject": "Web app slow to load",
+    "body": "The web file browser takes over 30 seconds to open the Finance folder, which has 800 files.",
+    "expected_category": "performance",
+    "expected_escalate": false
+  },
+  {
+    "id": "T-1058",
+    "from": "Zane at Proseware",
+    "subject": "Restored wrong version",
+    "body": "Version history restored an old copy of our budget spreadsheet over today's work. Can we get today's version back?",
+    "expected_category": "data_loss",
+    "expected_escalate": true
+  },
+  {
+    "id": "T-1059",
+    "from": "Viktor at Woodgrove Bank",
+    "subject": "Share links with expiry",
+    "body": "Could share links have an expiry date? We send contracts to clients and want links to stop working after a week.",
+    "expected_category": "feature_request",
+    "expected_escalate": false
+  },
+  {
+    "id": "T-1060",
+    "from": "Wen at Fabrikam",
+    "subject": "Cancel and refund",
+    "body": "We stopped using Sync Pro two weeks ago. Please cancel the subscription and refund the unused part of the year.",
+    "expected_category": "billing",
+    "expected_escalate": true
+  },
+  {
+    "id": "T-1061",
+    "from": "Chloe at Woodgrove Bank",
+    "subject": "New folder not syncing",
+    "body": "I created a Photos folder on my MacBook but it never shows up on the web or my other devices.",
+    "expected_category": "sync",
+    "expected_escalate": false
+  },
+  {
+    "id": "T-1062",
+    "from": "Priya at Litware",
+    "subject": "Cancel and refund",
+    "body": "We stopped using Sync Pro two weeks ago. Please cancel the subscription and refund the unused part of the year.",
+    "expected_category": "billing",
+    "expected_escalate": true
+  },
+  {
+    "id": "T-1063",
+    "from": "Rosa at Adventure Works",
+    "subject": "Selective sync ignored",
+    "body": "I unchecked Finance in selective sync but it still downloads to my Android phone and fills the disk.",
+    "expected_category": "sync",
+    "expected_escalate": false
+  },
+  {
+    "id": "T-1064",
+    "from": "Zane at Alpine Ski House",
+    "subject": "Files stuck at 'pending'",
+    "body": "About 12000 files in the Q4 reports folder have shown 'pending' since yesterday on my Surface tablet. Nothing uploads.",
+    "expected_category": "sync",
+    "expected_escalate": false
+  },
+  {
+    "id": "T-1065",
+    "from": "Tariq at Wide World Importers",
+    "subject": "Charged twice this month",
+    "body": "My card was charged $49.00 twice on the 6th for the same Pro plan. Please refund the duplicate.",
+    "expected_category": "billing",
+    "expected_escalate": true
+  },
+  {
+    "id": "T-1066",
+    "from": "Uma at Alpine Ski House",
+    "subject": "Files stuck at 'pending'",
+    "body": "About 800 files in the Finance folder have shown 'pending' since yesterday on my Windows laptop. Nothing uploads.",
+    "expected_category": "sync",
+    "expected_escalate": false
+  },
+  {
+    "id": "T-1067",
+    "from": "Farid at Adventure Works",
+    "subject": "SSO loop",
+    "body": "Signing in with our company SSO just loops back to the sign-in page. This started for everyone at Adventure Works today.",
+    "expected_category": "sign_in",
+    "expected_escalate": true
+  },
+  {
+    "id": "T-1068",
+    "from": "Ines at Tailspin Toys",
+    "subject": "Conflicted copies everywhere",
+    "body": "Every time two of us edit a file in Finance we get 'conflicted copy' duplicates. How do we stop that?",
+    "expected_category": "sync",
+    "expected_escalate": false
+  },
+  {
+    "id": "T-1069",
+    "from": "Grace at Litware",
+    "subject": "Files are zero bytes",
+    "body": "Several PDFs in Design assets now show as 0 bytes on every device. The originals are gone.",
+    "expected_category": "data_loss",
+    "expected_escalate": true
+  },
+  {
+    "id": "T-1070",
+    "from": "Viktor at Fabrikam",
+    "subject": "Locked out of account",
+    "body": "My account is locked after too many attempts and the unlock email never arrives.",
+    "expected_category": "sign_in",
+    "expected_escalate": false
+  },
+  {
+    "id": "T-1071",
+    "from": "Grace at Woodgrove Bank",
+    "subject": "Sync paused by itself",
+    "body": "Sync keeps pausing on my Android phone after it wakes from sleep. I have to resume it by hand every morning.",
+    "expected_category": "sync",
+    "expected_escalate": false
+  },
+  {
+    "id": "T-1072",
+    "from": "Chloe at Wide World Importers",
+    "subject": "Ransomware on a laptop",
+    "body": "A laptop at Woodgrove Bank got ransomware and the encrypted files synced to everyone. We need to roll back.",
+    "expected_category": "data_loss",
+    "expected_escalate": true
+  },
+  {
+    "id": "T-1073",
+    "from": "Viktor at Fabrikam",
+    "subject": "Web app slow to load",
+    "body": "The web file browser takes over 30 seconds to open the Design assets folder, which has 12000 files.",
+    "expected_category": "performance",
+    "expected_escalate": false
+  },
+  {
+    "id": "T-1074",
+    "from": "Chloe at Fourth Coffee",
+    "subject": "App uses 100% CPU",
+    "body": "Sync Pro uses all the CPU on my Windows laptop for hours, even when nothing is changing.",
+    "expected_category": "performance",
+    "expected_escalate": false
+  },
+  {
+    "id": "T-1075",
+    "from": "Nadia at Proseware",
+    "subject": "Files are zero bytes",
+    "body": "Several PDFs in Photos now show as 0 bytes on every device. The originals are gone.",
+    "expected_category": "data_loss",
+    "expected_escalate": true
+  },
+  {
+    "id": "T-1076",
+    "from": "Chloe at Northwind Traders",
+    "subject": "Need a VAT invoice",
+    "body": "Accounts needs an invoice with our VAT number for the last payment. Where do I add it?",
+    "expected_category": "billing",
+    "expected_escalate": true
+  },
+  {
+    "id": "T-1077",
+    "from": "Wen at Adventure Works",
+    "subject": "Sync paused by itself",
+    "body": "Sync keeps pausing on my Windows laptop after it wakes from sleep. I have to resume it by hand every morning.",
+    "expected_category": "sync",
+    "expected_escalate": false
+  },
+  {
+    "id": "T-1078",
+    "from": "Grace at Litware",
+    "subject": "Can't sign in after password reset",
+    "body": "I reset my password and now the work desktop app says 'invalid credentials' even though the web works.",
+    "expected_category": "sign_in",
+    "expected_escalate": false
+  },
+  {
+    "id": "T-1079",
+    "from": "Wen at Northwind Traders",
+    "subject": "Uploads very slow",
+    "body": "Uploads crawl at about 200 KB/s on a 500 Mbps connection. Other services are fast.",
+    "expected_category": "performance",
+    "expected_escalate": false
+  },
+  {
+    "id": "T-1080",
+    "from": "Tariq at Fabrikam",
+    "subject": "Bandwidth schedule",
+    "body": "It would help to limit upload speed during office hours and go full speed at night.",
+    "expected_category": "feature_request",
+    "expected_escalate": false
+  },
+  {
+    "id": "T-1081",
+    "from": "Lena at Adventure Works",
+    "subject": "Battery drain on mobile",
+    "body": "Since the last update the Android app drains my battery overnight.",
+    "expected_category": "performance",
+    "expected_escalate": false
+  },
+  {
+    "id": "T-1082",
+    "from": "Rosa at Litware",
+    "subject": "2FA codes rejected",
+    "body": "My authenticator codes are rejected every time. The clock on my Android phone is correct.",
+    "expected_category": "sign_in",
+    "expected_escalate": false
+  },
+  {
+    "id": "T-1083",
+    "from": "Uma at Tailspin Toys",
+    "subject": "Share links with expiry",
+    "body": "Could share links have an expiry date? We send contracts to clients and want links to stop working after a week.",
+    "expected_category": "feature_request",
+    "expected_escalate": false
+  },
+  {
+    "id": "T-1084",
+    "from": "Wen at Wide World Importers",
+    "subject": "Need a VAT invoice",
+    "body": "Accounts needs an invoice with our VAT number for the last payment. Where do I add it?",
+    "expected_category": "billing",
+    "expected_escalate": true
+  },
+  {
+    "id": "T-1085",
+    "from": "Elif at Alpine Ski House",
+    "subject": "SSO loop",
+    "body": "Signing in with our company SSO just loops back to the sign-in page. This started for everyone at Woodgrove Bank today.",
+    "expected_category": "sign_in",
+    "expected_escalate": true
+  },
+  {
+    "id": "T-1086",
+    "from": "Ines at Fabrikam",
+    "subject": "Linux client",
+    "body": "We have developers on Linux. Is a Linux client on the roadmap?",
+    "expected_category": "feature_request",
+    "expected_escalate": false
+  },
+  {
+    "id": "T-1087",
+    "from": "Sam at Tailspin Toys",
+    "subject": "Share links with expiry",
+    "body": "Could share links have an expiry date? We send contracts to clients and want links to stop working after a week.",
+    "expected_category": "feature_request",
+    "expected_escalate": false
+  },
+  {
+    "id": "T-1088",
+    "from": "Tariq at Fourth Coffee",
+    "subject": "Uploads very slow",
+    "body": "Uploads crawl at about 200 KB/s on a 500 Mbps connection. Other services are fast.",
+    "expected_category": "performance",
+    "expected_escalate": false
+  },
+  {
+    "id": "T-1089",
+    "from": "Yara at Woodgrove Bank",
+    "subject": "Bandwidth schedule",
+    "body": "It would help to limit upload speed during office hours and go full speed at night.",
+    "expected_category": "feature_request",
+    "expected_escalate": false
+  },
+  {
+    "id": "T-1090",
+    "from": "Dev at Tailspin Toys",
+    "subject": "Partner program question",
+    "body": "Woodgrove Bank resells software. Do you have a partner program?",
+    "expected_category": "other",
+    "expected_escalate": false
+  },
+  {
+    "id": "T-1091",
+    "from": "Mateo at Northwind Traders",
+    "subject": "Where is the user guide?",
+    "body": "Is there a PDF user guide I can share with new staff?",
+    "expected_category": "other",
+    "expected_escalate": false
+  },
+  {
+    "id": "T-1092",
+    "from": "Elif at Tailspin Toys",
+    "subject": "Can't sign in after password reset",
+    "body": "I reset my password and now the Android phone app says 'invalid credentials' even though the web works.",
+    "expected_category": "sign_in",
+    "expected_escalate": false
+  },
+  {
+    "id": "T-1093",
+    "from": "Chloe at Tailspin Toys",
+    "subject": "Card declined on renewal",
+    "body": "Renewal failed because the card expired. I updated it but the account still says payment overdue.",
+    "expected_category": "billing",
+    "expected_escalate": false
+  },
+  {
+    "id": "T-1094",
+    "from": "Jamal at Northwind Traders",
+    "subject": "Web app slow to load",
+    "body": "The web file browser takes over 30 seconds to open the Design assets folder, which has 40 files.",
+    "expected_category": "performance",
+    "expected_escalate": false
+  },
+  {
+    "id": "T-1095",
+    "from": "Nadia at Woodgrove Bank",
+    "subject": "Partner program question",
+    "body": "Fabrikam resells software. Do you have a partner program?",
+    "expected_category": "other",
+    "expected_escalate": false
+  },
+  {
+    "id": "T-1096",
+    "from": "Kofi at Proseware",
+    "subject": "Lost phone with authenticator",
+    "body": "I lost the phone with my authenticator app. How do I get back into my account?",
+    "expected_category": "sign_in",
+    "expected_escalate": false
+  },
+  {
+    "id": "T-1097",
+    "from": "Elif at Litware",
+    "subject": "Locked out of account",
+    "body": "My account is locked after too many attempts and the unlock email never arrives.",
+    "expected_category": "sign_in",
+    "expected_escalate": false
+  },
+  {
+    "id": "T-1098",
+    "from": "Jamal at Fourth Coffee",
+    "subject": "Need a VAT invoice",
+    "body": "Accounts needs an invoice with our VAT number for the last payment. Where do I add it?",
+    "expected_category": "billing",
+    "expected_escalate": true
+  },
+  {
+    "id": "T-1099",
+    "from": "Ben at Alpine Ski House",
+    "subject": "Security questionnaire",
+    "body": "Our security team needs your SOC 2 report and a completed vendor questionnaire.",
+    "expected_category": "other",
+    "expected_escalate": true
+  },
+  {
+    "id": "T-1100",
+    "from": "Ines at Wide World Importers",
+    "subject": "Conflicted copies everywhere",
+    "body": "Every time two of us edit a file in Client contracts we get 'conflicted copy' duplicates. How do we stop that?",
+    "expected_category": "sync",
+    "expected_escalate": false
+  }
+]
